@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --common-padding: 1.9rem 2rem;
+    --resume-page-color: #f2ede7;
+    --body-bg-color: #d6cec3;
+}
+
+body{
+    background-color: var(--body-bg-color);
+    min-width: 100vw;
+    min-height: 100vh;  
+    overflow-x: hidden;
+}
+
+.mainHeading{
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.normalText, li{
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.svgIcon{
+    width: 1.6rem;
+}
+
+.iconBx{
+    padding: 0.8rem 1rem;
+    border: 1px solid #000;
+}
+
+.iconBx img{
+    width: 2.6rem;
+}
+
+.hobbyIconBx{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.hobbyIconBx .iconBx{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ul{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.resumePageOne, .resumePageTwo{
+    background-color: var(--resume-page-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.resumeHeader{
+    padding: var(--common-padding);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.resumeBody{
+    display: grid;
+    grid-template-columns: 25rem 1fr;
+    margin: 2rem 0;
+} 
+
+.resumeBody .leftBx, .rightBx{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: var(--common-padding);
+}
+
+.rightBx .experienceBx{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.rightBx .experienceBx .wrapperDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 0.87rem;
+}
+
+.addressBx{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.leftBx .educationBx div:not(:last-child) , .leftBx .awardBx div:not(:last-child){
+    margin-bottom: 1.87rem;
+}
+
+.resumeBody .leftBx{
+    border-right: 2px solid #000;
+}
+
+.lineCentered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lineCentered h3{
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 1rem;
+}
+
+.lineCentered div:first-child{
+    width: 80px;
+    height: 2px;
+    background: #000;
+}
+
+.lineCentered div:last-child{
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+.headingTag{
+    text-transform: uppercase;
+    font-weight: 750;
+    padding: 0.5rem 1rem;
+    border: 2px solid #000;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.subHeading{
+    font-weight: 700;
+}
+
+.subHeading.big{
+    font-size: 2.4rem;
+    margin-bottom: -1rem;
+}
+
+.subHeading.small{
+    font-size: 1.3rem;
+    line-height: 1.17;
+    margin: 0.3rem 0;
+}
+
+.socialBx ul{
+    margin: 0;
+}
+
+.socialBx ul li{
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media(max-width: 991px){
+    .resumeBody{
+        grid-template-columns: 1fr;
+    } 
+}
+
+@media(max-width: 768px){
+    .resumePageOne{
+        background-color: var(--resume-page-color);
+        box-shadow: none;
+    }
+}
